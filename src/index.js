@@ -1,15 +1,11 @@
-exports.min = function min (array) {
-  if(array === undefined || array.length === 0) return 0;
-  return Math.min(...array);
-}
+exports.min = min = (array) =>
+    array === undefined || array.length === 0 ? 0 : Math.min(...array);
 
-exports.max = function max (array) {
-    if(array === undefined || array.length === 0) return 0;
-    return Math.max(...array);
-}
+exports.max = max = (array) =>
+    array === undefined || array.length === 0 ? 0 : Math.max(...array);
 
-exports.avg = function avg (array) {
-    if(array === undefined || array.length === 0) return 0;
+exports.avg = avg = (array) => {
+    if (array === undefined || array.length === 0) return 0;
     const sum = array.reduce((sum, item) => sum + item, 0);
     return sum / array.length;
-}
+};
